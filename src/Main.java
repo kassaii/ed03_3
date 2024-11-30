@@ -33,15 +33,14 @@ public class Main {
         double descuento = aplicarDescuento(subtotal); // Error en descuento
         double totalConDescuento = subtotal - descuento;
 
-        // Error lógico: no se aplica correctamente la función calcularImpuestos
         double totalConImpuestos = calcularImpuestos(totalConDescuento);
-        return totalConImpuestos;
+        return totalConDescuento + totalConImpuestos;
     }
 
     // Calcula el subtotal de la compra
     public static double calcularSubtotal(List<String> productos, List<Double> precios, int[] cantidades) {
         double subtotal = 0;
-        for (int i = 0; i <= productos.size(); i++) {
+        for (int i = 0; i < productos.size(); i++) {
             // Error de control: verificar si la cantidad es mayor que cero
             subtotal += precios.get(i) * cantidades[i];
         }
@@ -66,7 +65,11 @@ public class Main {
     // Calcula los impuestos aplicados al total con descuento
     public static double calcularImpuestos(double total) {
         final double IMPUESTO = 0.21; // Impuesto del 21%
-        // Error lógico: no se aplica correctamente el cálculo
-        return total * IMPUESTO; // Debe devolver total + impuestos
+
+        double impuestos = total * IMPUESTO;
+
+        impuestos = Math.round(impuestos * 100.0) / 100.0;
+
+        return impuestos;
     }
 }
