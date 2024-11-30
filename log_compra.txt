@@ -1,0 +1,6 @@
+nov 30, 2024 8:45:31 P. M. Main2 calcularSubtotal
+INFO: Subtotal: $2550.0
+nov 30, 2024 8:45:31 P. M. Main2 calcularImpuestos
+INFO: Impuestos: $455.18
+nov 30, 2024 8:45:31 P. M. Main2 main
+INFO: Total de la compra con impuestos y descuento: $2622.68
